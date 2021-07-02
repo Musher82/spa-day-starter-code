@@ -5,6 +5,27 @@
     <title></title>
 </head>
 <body>
+    <form method ="post">
 
+        <label>Enter User Name
+               <input type="text" name="userName" th:value="${username}"/>
+        </label>
+
+        <label>Email Address
+            <input type="email" name="email" th:value="${email}"/>
+        </label>
+
+        <label>Password
+            <input type="password" name="password">
+        </label>
+
+        <label>Verify Password
+            <input type="password" name="verifyPassword";
+        </label>
+
+        <input type="submit" value="Sign up">
+
+
+    </form>
 </body>
 </html>
