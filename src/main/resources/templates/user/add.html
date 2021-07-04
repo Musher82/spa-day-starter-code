@@ -2,30 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title>Create a Client Profile</title>
 </head>
 <body>
+
+<div class = "table">
     <form method ="post">
-
-        <label>Enter User Name
-               <input type="text" name="userName" th:value="${username}"/>
-        </label>
-
-        <label>Email Address
+<h1>Create a User Account</h1>
+        <br>
+        <label>Enter Username:</label>
+               <input type="text" name="username" th:value="${username}"/>
+        <br><br>
+        <label>Email Address:</label>
             <input type="email" name="email" th:value="${email}"/>
-        </label>
-
-        <label>Password
+        <br><br>
+        <label>Password:</label>
             <input type="password" name="password">
-        </label>
-
-        <label>Verify Password
-            <input type="password" name="verifyPassword";
-        </label>
-
-        <input type="submit" value="Sign up">
-
-
+        <label>Verify Your Password:</label>
+            <input type="password" name="verifyPassword">
+        <p th:text="${error}"></p>
+        <br><br>
+        <input type="submit" value="Create Account">
     </form>
+</div>
 </body>
 </html>
